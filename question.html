@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <style type="text/css">
+        body{
+            background-color: rgb(233, 156, 83);
+        }
+        input 
+        {
+            width: 250px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: rgb(237, 252, 210);
+            font-family: 'Lucida Sans';
+            font-style: oblique;
+        }
+
+        label
+        {
+            font-style: unset;
+            font-size: small;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body align="center">
+    
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">FORM</h1>
+
+    <form action="#" onsubmit="return validation()">
+
+        <div>
+            <label for="fname">FIRST NAME :</label>
+            <input type="text" id="fname" name="fname" placeholder="enter your first name">
+            
+        </div>
+        <br>
+
+        <div>
+            <label for="lname">LAST NAME</label>
+            <input type="text" id="lname" placeholder="enter your last name">
+        </div>
+        <br>
+
+        <div>
+            <label for="email">E-MAIL :</label>
+            <input type="email" id="email" placeholder="example@gmail.com">
+        </div>
+        <br>
+
+        <div>
+            <label for="num">PHONE NUMBER :</label>
+            <input type="tel" id="num" name="num" placeholder="999-999-999-0">
+        </div>
+        <br>
+
+        <div>
+            <label for="add">ADDRESS</label>
+            <input type="text" id="add" name="add" placeholder="enter your address">
+        </div>
+        <br>
+
+        <div>
+            <label for="district">DISTRICT :</label>
+            <select id="district" name="district">
+                <option>PALAKKAD</option>
+                <option>TRIVANDRUM</option>
+                <option>KOCHI</option>
+                <option>THRISSUR</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="password">PASSWORD :</label>
+            <input type="password" id="password" name="password" placeholder="enter your password" maxlength="15" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="gen">GENDER :</label>
+            
+            <label for="male">MALE </label>
+            <input type="radio" id="male" name="gen">
+            
+            <label for="female">FEMALE </label>
+            <input type="radio" id="female" name="gen">
+            
+            <label for="others">OTHERS </label>
+            <input type="radio" id="others" name="gen">
+        </div>
+        <br>
+
+        <div>
+            <label>QUALIFICATIONS :</label>
+
+            <label for="10th">10th:</label>
+            <input type="checkbox" id="10th">
+
+            <label for="12th">12th:</label>
+            <input type="checkbox" id="12th">
+
+            <label for="college">college:</label>
+            <input type="checkbox" id="college">
+        </div>
+        <br>
+
+        <div>
+            <input type="submit">
+        </div>
+        <br>
+
+        <div>
+            <input type="reset">
+        </div>
+
+
+    </form>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+    
