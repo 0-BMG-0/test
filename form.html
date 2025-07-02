@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hehe</title>
+    <style>
+        table{
+            
+            background-color: rgb(43, 208, 226);
+            align-content: center;
+            width: 400px;
+            height: 35px;
+            border-radius: 10cm;
+            border: 30px rgb(64, 41, 41);
+            
+        }
+        input{
+            border: 20px rgb(139, 0, 0);
+            border-radius: 5px;
+        }
+
+        ::placeholder{
+            font-family: 'Gill Sans';
+            font-style: italic;
+            font-size: large;
+        }
+
+        span{
+            color: rgb(226, 43, 43);
+        }
+
+    </style>
+</head>
+<body align="center">
+<form action="#" onsubmit="return validation()" autocomplete="off">
+    <table align="center" cellspacing="30">
+        
+        <tr><td>
+            <input type="text" id="fname"  name="fname" placeholder="enter your first name"> 
+            <br><span id="fnamee" ></span>
+        </td></tr>
+
+        
+        <tr><td>
+            <input type="text" id="lname"  name="lname" placeholder="enter your last name">
+            <br><span id="lnamee"></span>
+        </td></tr>
+        
+        
+        <tr><td>
+            <input type="email" id="email"  name="email" placeholder="example@gmail.com"> 
+            <br><span id="emaill"></span>
+        </td></tr>
+
+        
+        <tr><td>
+            <input type="tel" id="num"  name="num" placeholder="enter your number"> 
+            <br><span id="numm"></span>
+        </td></tr>
+
+        <tr><td>
+            <input type="text" id="pass"  name="pass" placeholder="enter your password"> 
+            <br><span id="passs"></span>
+        </td></tr>
+
+
+        <tr><td><input type="submit"></td></tr>
+        <tr><td><input type="reset" onclick="clearForm()"></td></tr>
+
+    </table>
+</form>
+
+
+<script type="text/javascript">
+    function validation() {
+        var isValid = true; // Assume everything is correct first
+
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var email = document.getElementById('email').value;
+        var num = document.getElementById('num').value;
+        var pass = document.getElementById('pass').value;
+
+        // Clear previous error messages
+        document.getElementById('fnamee').innerHTML = "";
+        document.getElementById('lnamee').innerHTML = "";
+        document.getElementById('emaill').innerHTML = "";
+        document.getElementById('numm').innerHTML = "";
+        document.getElementById('passs').innerHTML = "";
+
+        // Validation checks
+
+        //FNAME
+        if (fname == "") {
+            document.getElementById('fnamee').innerHTML = "**ENTER A FIRST NAME**";
+            isValid = false;
+        } else if (fname.length <= 2) {
+            document.getElementById('fnamee').innerHTML = "**MINIMUM OF 3 CHARACTERS REQUIRED**";
+            isValid = false;
+        } else if(!isNaN(fname)){
+            document.getElementById('fnamee').innerHTML = "**only charachters are allowed**";
+            isValid = false;
+        }else{
+            document.getElementById('lnamee').innerHTML = ""
+        }
+
+
+        //LNAME
+        if (lname == "") {
+            document.getElementById('lnamee').innerHTML = "**ENTER A LAST NAME**";
+            isValid = false;
+        } else if(lname<=2){
+            document.getElementById('lnamee').innerHTML = "*MORE THAN 2*"
+            isValid = false
+        } else if(!isNaN(lname)){
+            document.getElementById('lnamee').innerHTML = "no numbers"
+        }else{
+            document.getElementById('lnamee').innerHTML = ""
+        }
+
+
+        //EMAIL
+        if (email == "") {
+            document.getElementById('emaill').innerHTML = "**ENTER AN EMAIL**";
+            isValid = false;
+        }
+
+
+        //NUM
+        if (num == "") {
+            document.getElementById('numm').innerHTML = "**ENTER A NUMBER**";
+            isValid = false;
+        }else if(num==10){
+            document.getElementById('numm').innerHTML = "**ENTER A VALID NUMBER**";
+            isValid = false;
+        }else if(isNaN(num)){
+            document.getElementById('numm').innerHTML = "**ENTER A VALID NUMBER**";
+            isValid = false;
+        }
+
+
+        if (pass == "") {
+            document.getElementById('passs').innerHTML = "**ENTER A PASSWORD**";
+            isValid = false;
+        }
+
+
+
+
+
+
+        return isValid; // If any field is wrong, prevent form submission
+    }
+
+    function clearForm() {
+    // Clear all error messages
+    document.getElementById('fnamee').innerHTML = "";
+    document.getElementById('lnamee').innerHTML = "";
+    document.getElementById('emaill').innerHTML = "";
+    document.getElementById('numm').innerHTML = "";
+    document.getElementById('passs').innerHTML = "";
+}
+
+</script>
+
+
+
+</body>
+</html>
